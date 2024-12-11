@@ -1,7 +1,5 @@
 package Controllers.util;
 
-import java.util.Random;
-
 public class Utilidades {
 
     public static boolean validate(String num) {
@@ -23,40 +21,12 @@ public class Utilidades {
         return band;
     }
 
-    public static int transformStringInt(String num) {
-        int resp = 0;
-        if(Utilidades.validate(num)) {
-            resp = (int)Utilidades.transformStringFloat(num);
-        }
-        return resp;
-    }
-
     public static double transformStringDouble(String num) {
         double resp = 0;
         if(Utilidades.validate(num)) {
             resp = Double.parseDouble(num);
         }
         return resp;
-    }
-
-    public static float transformStringFloat(String num) {
-        float resp = 0;
-        if(Utilidades.validate(num)) {
-            resp = Float.parseFloat(num);
-        }
-        return resp;
-    }
-
-    public static int generaNumeroRango(int minimo, int maximo) {
-        Random random = new Random();
-
-        return minimo + random.nextInt((maximo + 1) - minimo);
-    }
-
-    public static float generaNumeroRangoFloat(float minimo, float maximo) {
-        Random random = new Random();
-
-        return minimo + random.nextFloat((maximo + 1) - minimo);
     }
 
     public static float Redondear_float (float num) {
