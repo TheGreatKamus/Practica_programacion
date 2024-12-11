@@ -15,8 +15,7 @@ public class Ej_4 {
         do {
             System.out.println("");
             System.out.println("Ingrese el numero de pasos de la serie:");
-            String paso = sc.nextLine();
-            int paso_serie = Utilidades.transformStringInt(paso);
+            int paso_serie = sc.nextInt();
 
             if (paso_serie > 0) {
                 System.out.println(Mostrar_serie(paso_serie));
@@ -72,9 +71,8 @@ public class Ej_4 {
 
         String serie = "S = ";
         int signo = -1;
-        double resp = 0;
-        resp = (Math.pow((Figonachi(paso_serie + 1) / Numeros_impar(paso_serie + 1)), Expo_mul_dos(paso_serie + 1)));
-
+        double resp = (Math.pow((Figonachi(paso_serie + 1) / Numeros_impar(paso_serie + 1)), Expo_mul_dos(paso_serie + 1)));
+        
         for (int i = 1; i < paso_serie + 1; i++) {
 
             int figo = Figonachi(i);
